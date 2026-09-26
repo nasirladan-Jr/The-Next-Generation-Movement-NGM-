@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Next Generation Movement | NGM</title>
+<style>
+:root{--green:#075c39;--dark:#10151b;--light:#f4f8f5;--gold:#d5a928}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--dark);background:var(--light)}
+header{background:var(--dark);color:white;padding:14px 6%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:5}
+header img{width:70px;height:70px;object-fit:contain;background:white;border-radius:8px}
+nav a{color:white;text-decoration:none;margin:0 9px;font-size:14px}
+.hero{min-height:650px;background:linear-gradient(90deg,#063d28dd,#0007),url("chairman-patron.jpeg") center/cover;display:flex;align-items:center;padding:70px 8%;color:white}
+.hero div{max-width:650px}.hero h1{font-size:clamp(38px,6vw,72px);margin:12px 0}.hero p{font-size:21px;line-height:1.6}
+.btn{display:inline-block;background:var(--gold);color:#111;border:0;border-radius:5px;padding:14px 22px;font-weight:bold;text-decoration:none;cursor:pointer}
+section{padding:65px 8%;max-width:1250px;margin:auto}h2{text-align:center;color:var(--green);font-size:34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}.card{background:white;padding:25px;border-radius:12px;box-shadow:0 4px 18px #0001;line-height:1.7}
+.counter{text-align:center;background:var(--green);color:white;padding:35px}.counter strong{display:block;font-size:52px;color:var(--gold)}
+form{max-width:850px;margin:auto;background:white;padding:28px;border-radius:12px;box-shadow:0 4px 18px #0001}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+label{font-weight:bold;font-size:14px}input,select,textarea{width:100%;padding:12px;margin-top:6px;border:1px solid #ccd5cf;border-radius:5px}
+.full{grid-column:1/-1}.notice{background:#fff8df;border-left:5px solid var(--gold);padding:14px;margin:18px 0;line-height:1.6}
+footer{background:var(--dark);color:white;text-align:center;padding:35px 8%;line-height:1.8}
+@media(max-width:700px){header{flex-wrap:wrap;gap:10px}nav{width:100%;text-align:center}nav a{display:inline-block;margin:6px 4px}.hero{min-height:560px}}
+</style>
+</head>
+<body>
+<header>
+  <img src="ngm-logo.jpeg" alt="Next Generation Movement logo">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#objectives">Objectives</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#register">Join NGM</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <div>
+    <p>THE NEXT GENERATION MOVEMENT</p>
+    <h1>New Leaders. Stronger Voices. Better Nigeria.</h1>
+    <p>Empower. Engage. Transform.</p>
+    <a class="btn" href="#register">Become a Member</a>
+  </div>
+</section>
+<div class="counter">
+  <div>Approved NGM Members</div>
+  <strong id="memberCount">0</strong>
+</div>
+<section id="about">
+<h2>About NGM</h2>
+<div class="card">
+<p>The Next Generation Movement is a nationwide, non-partisan and permanent political mobilization movement committed to ensuring that Nigerian youths participate meaningfully in leadership and governance at every level.</p>
+<h3>Our Vision</h3>
+<p>A Nigeria where young people are empowered, represented and positioned to lead responsible national transformation.</p>
+<h3>Our Mission</h3>
+<p>To mobilize, educate, mentor and organize young Nigerians for constructive participation in governance, leadership and community development.</p>
+</div>
+</section>
+<section id="objectives">
+<h2>Aims and Objectives</h2>
+<div class="grid">
+<div class="card"><h3>Youth Inclusion</h3><p>Promote active representation and appointments for young professionals and youth leaders.</p></div>
+<div class="card"><h3>Cross-Party Coalition</h3><p>Support youth-centred candidates and initiatives across political platforms.</p></div>
+<div class="card"><h3>Electoral Mobilization</h3><p>Build a grassroots network across Nigeria’s states and the FCT.</p></div>
+<div class="card"><h3>Leadership Development</h3><p>Cultivate and mentor responsible political leadership for future generations.</p></div>
+</div>
+</section>
+<section id="leadership">
+<h2>Leadership</h2>
+<div class="card" style="text-align:center">
+<img src="chairman-patron.jpeg" alt="NGM Chairman and Patron" style="max-width:320px;width:100%;border-radius:12px">
+<h3>Chairman and Patron</h3>
+<p>The Next Generation Movement</p>
+</div>
+</section>
+<section id="register">
+<h2>Membership Registration</h2>
+<form id="membershipForm">
+<div class="notice">
+Your information must be processed through a secure production system. NIN must never be stored in browser storage or sent by ordinary email.
+</div>
+<div class="fields">
+<label>Full Name<input name="name" required></label>
+<label>Date of Birth<input type="date" name="dob" required></label>
+<label>Nationality<input name="nationality" value="Nigerian" required></label>
+<label>State of Origin<input name="state" required></label>
+<label>Local Government Area<input name="lga" required></label>
+<label>Email Address<input type="email" name="email" required></label>
+<label>Phone Number<input type="tel" name="phone" required></label>
+<label>NIN<input type="password" name="nin" required autocomplete="off"></label>
+<label class="full">Passport Photograph<input type="file" name="photo" accept="image/*" required></label>
+<label class="full">
+<input type="checkbox" required>
+ I agree to the NGM membership terms and the organization’s privacy notice.
+</label>
+</div>
+<br>
+<button class="btn" type="submit">Submit Membership Application</button>
+<p id="formMessage"></p>
+</form>
+</section>
+<section>
+<h2>Membership Terms</h2>
+<div class="card">
+<p>Members commit to supporting youth participation, lawful and peaceful engagement, grassroots action and the long-term development of the Next Generation Movement.</p>
+<p>NGM maintains zero tolerance for political violence, hate speech and unlawful conduct.</p>
+<p><strong>Declaration:</strong> “We are not waiting for tomorrow. We are the Future, and the Future is Here.”</p>
+</div>
+</section>
+<section id="contact">
+<h2>Contact Us</h2>
+<div class="card" style="text-align:center">
+<p><strong>Address:</strong> Wuse Zone 6, Abuja, Nigeria</p>
+<p><strong>Phone:</strong> +234 701 190 0066</p>
+<p><strong>Email:</strong> NextGenerationMovement@gmail.com</p>
+</div>
+</section>
+</main>
+<footer>
+<strong>The Next Generation Movement</strong><br>
+New Leaders. Stronger Voices. Better Nigeria.
+</footer>
+<script>
+const count = document.getElementById("memberCount");
+count.textContent = localStorage.getItem("ngmApprovedMembers") || "0";
+document.getElementById("membershipForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("formMessage").innerHTML =
+    "<strong>Application received.</strong> This demo does not yet process or store personal information. Connect it to a secure backend before public use.";
+  this.reset();
+});
+</script>
+</body>
+</html>
+
+
